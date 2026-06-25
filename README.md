@@ -53,7 +53,16 @@ Core dependencies: Python 3.9.5, PyTorch 1.8.0 (CUDA 11.1.1). All remaining depe
 
 ## Datasets
 
-- **CIFAR-10 / CIFAR-100**: downloaded automatically via `torchvision`.
+- **CIFAR-10 / CIFAR-100**: downloaded automatically via `torchvision` on first run.
+
+If automatic download fails (e.g. due to network restrictions), you can manually download the datasets from their official pages:
+
+| Dataset | Official Download Page |
+|---|---|
+| CIFAR-10 | https://www.cs.toronto.edu/~kriz/cifar.html |
+| CIFAR-100 | https://www.cs.toronto.edu/~kriz/cifar.html |
+
+Download the Python version of each archive (`cifar-10-python.tar.gz` / `cifar-100-python.tar.gz`), extract it, and place the resulting folder under your torchvision data root (default: `~/data/`). torchvision will detect the extracted files automatically and skip the download step.
 
 ## Key Configuration Parameters
 
